@@ -1,0 +1,74 @@
+:root {
+    --color1: #394a6d;
+    --color2: #3c9d9b;
+    --color3: #52de97;
+    --color4: #c0ffb3;
+}
+body {
+    background-color: var(--color1);
+    color: var(--color4);
+    text-align: center;
+    line-height: 1.6;
+}
+.button {
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    top: 25px;
+    border: 2px solid var(--color3);
+    color:var(--color4);
+    transition-duration: 0.5s;
+    animation-name: opacity;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.buttonDiv {
+    transition-duration: 0.5s;
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+}
+.buttonDiv:hover {
+    transform: skewX(90deg);
+}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#showcase > h1 {
+    font-family: 'Rochester', cursive;
+    font-size: 5em;
+    margin: 0;
+    position: relative;
+    animation-name: heading;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0% {top: -100%}
+    100% {top: 10%;}
+}
+
+.container {
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+#content {
+    position: relative;
+    animation-name: container;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes container {
+    0% {left: -95%}
+    100% {left: 0%}
+}
+
+#showcase {
+    height: 150px;
+}
