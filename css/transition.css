@@ -12,7 +12,7 @@ body {
 }
 .uwu::after {
     content: "";
-    background-image: url('../DOGE.jpg');
+    background-image: url('../img/DOGE.jpg');
     background-size: 100%;
     background-position-y: -50px;
     opacity: 0;

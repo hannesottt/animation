@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+}
+h2 {
+    margin: 0;
+    margin-top: 30vh;
+    font-size: 30px;
+    font-size: 9vw;
+    font-weight: 100;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition-duration: 0.5s;
+}
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+a:hover {
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.25);
+    transition-duration: 0.5s;
+}
+a:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0s;
+}
+ul {
+    text-align: center;
+    margin-right: 35px;
+}
+.container {
+    background: rgb(255,119,0);
+    background: linear-gradient(90deg, rgba(255,119,0,1) 0%, rgba(255,157,69,1) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+    height: 90vh;
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+}
+@keyframes background {
+    0% {left: 0px; opacity: 0;}
+    5% {opacity: 0.1;}
+    95% {opacity: 0.1;}
+    100% {left: -4000px; opacity: 0;}
+}
+.bgBigText {
+    position: absolute;
+    font-size: 50em;
+    font-weight: 700;
+    z-index: -1;
+    top: -10vh;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    animation-name: background;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        margin-top: 20vh;
+        font-size: 20vw;
+    }
+    li {
+        margin: 20px 0;
+    }
+    .bgBigText {
+        top: 30vh;
+    }
+    @media (max-height: 950px) {
+        h2 {
+            font-size: 10vw;
+        }
+        .bgBigText {
+            top: 0vh; 
+            font-size: 25em;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        height: 95%;
+    }
+    .bgBigText {
+        font-size: 25em;
+    }
+}
